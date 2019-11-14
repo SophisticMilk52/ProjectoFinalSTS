@@ -7,15 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.icesi.ci.talleres.dao.DAORuta;
+import co.edu.icesi.ci.talleres.dao.InterfazDAORuta;
 import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 
 @Service
 public class RutaService implements InterfazRutaService {
 
 	@Autowired
-	private DAORuta rutaRepository;
+	private InterfazDAORuta rutaRepository;
 
-	public RutaService(DAORuta rutaRepository) {
+	public RutaService(InterfazDAORuta rutaRepository) {
 		this.rutaRepository = rutaRepository;
 	}
 

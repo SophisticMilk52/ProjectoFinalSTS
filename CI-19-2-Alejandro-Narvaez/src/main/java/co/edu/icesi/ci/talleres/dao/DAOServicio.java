@@ -47,7 +47,7 @@ public class DAOServicio implements InterfazDAOServicio {
 
 	@Override
 	public List<Tmio1Servicio> findAll() {
-		String jpql = "Select a from TAlumno a";
+		String jpql = "Select a from Tmio1Servicio a";
 		return entityManager.createQuery(jpql).getResultList();
 	}
 

@@ -7,15 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.icesi.ci.talleres.dao.DAOConductor;
+import co.edu.icesi.ci.talleres.dao.InterfazDAOConductor;
 import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 
 @Service
 public class ConductorService implements InterfazConductorService {
 
 	@Autowired
-	private DAOConductor conductorRepository;
+	private InterfazDAOConductor conductorRepository;
 
-	public ConductorService(DAOConductor conductorRepository) {
+	public ConductorService(InterfazDAOConductor conductorRepository) {
 		this.conductorRepository = conductorRepository;
 	}
 
