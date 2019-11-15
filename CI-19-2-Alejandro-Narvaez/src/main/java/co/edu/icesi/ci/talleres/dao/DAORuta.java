@@ -24,6 +24,7 @@ public class DAORuta implements InterfazDAORuta {
 
 	@Override
 	public void save(Tmio1Ruta entity) {
+	
 		entityManager.persist(entity);
 
 	}

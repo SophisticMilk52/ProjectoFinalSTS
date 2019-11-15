@@ -19,10 +19,10 @@ import co.edu.icesi.ci.talleres.service.RutaService;
 @Controller
 public class RutaController {
 
-	DAORuta rutaService;
+	RutaService rutaService;
 	
 	@Autowired
-	public RutaController(DAORuta rutaService) {
+	public RutaController(RutaService rutaService) {
 		this.rutaService = rutaService;
 	}
 	
