@@ -69,6 +69,7 @@ public class Tmio1ServiciosSitioPK implements Serializable {
 		this.horaProgramada = horaProgramada;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -86,6 +87,7 @@ public class Tmio1ServiciosSitioPK implements Serializable {
 			&& (this.horaProgramada == castOther.horaProgramada);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

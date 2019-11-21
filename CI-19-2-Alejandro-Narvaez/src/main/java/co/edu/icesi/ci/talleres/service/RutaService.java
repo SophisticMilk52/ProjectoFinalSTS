@@ -1,12 +1,9 @@
 package co.edu.icesi.ci.talleres.service;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import co.edu.icesi.ci.talleres.dao.DAORuta;
 import co.edu.icesi.ci.talleres.dao.InterfazDAORuta;
 import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 
@@ -21,6 +18,7 @@ public class RutaService implements InterfazRutaService {
 	}
 
 	@Transactional
+	@Override
 	public void save(Tmio1Ruta ruta) {
 		if (ruta.getDiaInicio().compareTo(ruta.getDiaFin()) == -1
 				&& ruta.getHoraInicio().compareTo(ruta.getHoraFin()) == -1) {
@@ -29,17 +27,20 @@ public class RutaService implements InterfazRutaService {
 	}
 
 	@Transactional
+	@Override
 	public Tmio1Ruta findById(Integer id) {
 
 		return rutaRepository.findById(id);
 	}
 
 	@Transactional
+	@Override
 	public Iterable<Tmio1Ruta> findAll() {
 		return rutaRepository.findAll();
 	}
 
 	@Transactional
+	@Override
 	public void delete(Tmio1Ruta ruta) {
 		rutaRepository.delete(ruta);
 

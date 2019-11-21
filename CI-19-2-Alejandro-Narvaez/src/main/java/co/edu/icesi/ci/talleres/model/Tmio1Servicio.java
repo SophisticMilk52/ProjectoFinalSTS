@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-import lombok.Data;
-
 
 /**
  * The persistent class for the tmio1_servicios database table.

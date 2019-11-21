@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import co.edu.icesi.ci.talleres.dao.DAORuta;
 import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
-import co.edu.icesi.ci.talleres.service.RutaService;
 
 @Controller
 public class RutaController {

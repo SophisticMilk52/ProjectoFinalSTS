@@ -33,6 +33,7 @@ public class Tmio1SitiosRutaPK implements Serializable {
 		this.idRuta = idRuta;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +47,7 @@ public class Tmio1SitiosRutaPK implements Serializable {
 			&& this.idRuta.equals(castOther.idRuta);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

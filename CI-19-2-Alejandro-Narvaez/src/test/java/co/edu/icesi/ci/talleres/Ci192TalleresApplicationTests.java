@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 import co.edu.icesi.ci.talleres.repositories.RutasRepository;
-import co.edu.icesi.ci.talleres.repositories.ServiciosRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

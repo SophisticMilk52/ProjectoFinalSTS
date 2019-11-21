@@ -10,9 +10,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
-import co.edu.icesi.ci.talleres.model.Tmio1Bus;
 import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
-import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 
 @Repository
 @Scope("singleton")

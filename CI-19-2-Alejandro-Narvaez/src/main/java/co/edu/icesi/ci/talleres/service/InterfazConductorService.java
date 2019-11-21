@@ -1,6 +1,5 @@
 package co.edu.icesi.ci.talleres.service;
 
-import java.util.Optional;
 import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 
 public interface InterfazConductorService {

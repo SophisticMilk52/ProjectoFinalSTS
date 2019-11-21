@@ -1,11 +1,9 @@
 package co.edu.icesi.ci.talleres.dao;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 
 public interface InterfazDAORuta {

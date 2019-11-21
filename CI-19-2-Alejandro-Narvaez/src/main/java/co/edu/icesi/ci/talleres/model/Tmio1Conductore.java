@@ -8,8 +8,6 @@ import javax.validation.constraints.Past;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import co.edu.icesi.ci.talleres.validation.Validation2;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.List;
 

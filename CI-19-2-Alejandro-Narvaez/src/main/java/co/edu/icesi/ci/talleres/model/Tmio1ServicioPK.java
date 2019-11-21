@@ -7,8 +7,6 @@ import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import lombok.Data;
-
 /**
  * The primary key class for the tmio1_servicios database table.
  * 
@@ -40,6 +38,7 @@ public class Tmio1ServicioPK implements Serializable {
 	public Tmio1ServicioPK() {
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +55,7 @@ public class Tmio1ServicioPK implements Serializable {
 			&& this.fechaFin.equals(castOther.fechaFin);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;
