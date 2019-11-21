@@ -10,9 +10,9 @@ import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 @Service
 public class RutaService implements InterfazRutaService {
 
-	@Autowired
-	private InterfazDAORuta rutaRepository;
 
+	private InterfazDAORuta rutaRepository;
+	@Autowired
 	public RutaService(InterfazDAORuta rutaRepository) {
 		this.rutaRepository = rutaRepository;
 	}
@@ -29,7 +29,6 @@ public class RutaService implements InterfazRutaService {
 	@Transactional
 	@Override
 	public Tmio1Ruta findById(Integer id) {
-
 		return rutaRepository.findById(id);
 	}
 
