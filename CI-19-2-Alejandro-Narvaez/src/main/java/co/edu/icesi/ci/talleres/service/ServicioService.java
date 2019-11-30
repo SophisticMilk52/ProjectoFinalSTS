@@ -33,6 +33,7 @@ public class ServicioService implements InterfazServicioService {
 	}
 
 	@Transactional
+	@Override
 	public Tmio1Servicio buscarPorId(Integer id) {
 		Iterable<Tmio1Servicio> todos = findAll();
 		for (Tmio1Servicio servicio : todos) {

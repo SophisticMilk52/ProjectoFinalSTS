@@ -13,4 +13,6 @@ public interface InterfazServicioService {
 
 	public void delete(Tmio1Servicio servicio);
 	
+	public Tmio1Servicio buscarPorId(Integer id);
+	
 }
