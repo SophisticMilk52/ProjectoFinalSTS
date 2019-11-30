@@ -26,7 +26,7 @@
 								<option th:each="cond : ${conductores}"
 									th:value="${cond.cedula}" class="form-control"
 									th:text="${cond.cedula}"
-									th:selected="${servicio.cedulaConductor=cond}"></option>
+									th:selected="${servicio.cedulaConductor=cond.cedula}"></option>
 							</select> <span th:if="${#fields.hasErrors('cedulaConductor')}"
 								th:errors="*{cedulaConductor}" class="text-danger"></span>
 						</div>
@@ -35,7 +35,7 @@
 								th:field="*{idBus}">
 								<option th:each="bu : ${buses}" th:value="${bu.id}"
 									class="form-control" th:text="${bu.id}"
-									th:selected="${servicio.idBus=bu}"></option>
+									th:selected="${servicio.idBus=bu.id}"></option>
 							</select> <span th:if="${#fields.hasErrors('idBus')}" th:errors="*{idBus}"
 								class="text-danger"></span>
 						</div>
@@ -44,7 +44,7 @@
 								ruta</label> <select th:field="*{idRuta}">
 								<option th:each="rut : ${rutas}" th:value="${rut.id}"
 									class="form-control" th:text="${rut.id}"
-									th:selected="${servicio.idRuta=rut}"></option>
+									th:selected="${servicio.idRuta=rut.id}"></option>
 							</select> <span th:if="${#fields.hasErrors('idRuta')}"
 								th:errors="*{idRuta}" class="text-danger"></span>
 						</div>
