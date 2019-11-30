@@ -12,7 +12,7 @@ import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 public class ConductorDelegateImp implements ConductorDelegate {
 
 	RestTemplate restTemplate;
-	final String SERVER = "http://localhost:8080/";
+	final String SERVER = "http://localhost:8080/api/";
 	
 	public ConductorDelegateImp() {
 		restTemplate = new RestTemplate();

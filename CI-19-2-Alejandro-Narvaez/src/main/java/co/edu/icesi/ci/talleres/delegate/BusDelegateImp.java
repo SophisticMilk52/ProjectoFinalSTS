@@ -12,7 +12,7 @@ import co.edu.icesi.ci.talleres.model.Tmio1Bus;
 public class BusDelegateImp implements BusDelegate {
 
 	RestTemplate restTemplate;
-	final String SERVER = "http://localhost:8080/";
+	final String SERVER = "http://localhost:8080/api/";
 	
 	public BusDelegateImp() {
 		restTemplate = new RestTemplate();

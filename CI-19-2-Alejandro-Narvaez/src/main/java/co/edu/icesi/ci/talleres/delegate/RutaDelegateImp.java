@@ -13,7 +13,7 @@ import co.edu.icesi.ci.talleres.model.Tmio1Ruta;
 public class RutaDelegateImp implements RutaDelegate {
 	
 	RestTemplate restTemplate;
-	final String SERVER = "http://localhost:8080/";
+	final String SERVER = "http://localhost:8080/api/";
 	
 	public RutaDelegateImp() {
 		restTemplate = new RestTemplate();
