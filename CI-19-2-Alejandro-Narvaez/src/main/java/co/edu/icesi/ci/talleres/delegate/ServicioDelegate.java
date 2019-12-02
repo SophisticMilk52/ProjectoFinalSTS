@@ -7,7 +7,7 @@ public interface ServicioDelegate {
 
 	public Iterable<Tmio1Servicio> getServicios();
 	
-	public Tmio1Servicio getServicio(Tmio1ServicioPK id);
+	public Tmio1Servicio getServicio(Integer id);
 	
 	public Tmio1Servicio addServicio(Tmio1Servicio servicio);
 	

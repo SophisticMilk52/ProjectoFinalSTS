@@ -35,20 +35,20 @@ public class ServicioDelegateImp implements ServicioDelegate {
 	}
 
 	//OJO CON ESTO, tal vez reciba como parametro un Integer o un PK??
-	/*
+	
 	@Override
 	public Tmio1Servicio getServicio(Integer id) {
 		Tmio1Servicio servicio = restTemplate.getForObject(SERVER + "servicios/" + id, Tmio1Servicio.class);
 		return servicio;
 	}
-	*/
 	
+	/*
 	@Override
 	public Tmio1Servicio getServicio(Tmio1ServicioPK id) {
 		Tmio1Servicio servicio = restTemplate.getForObject(SERVER + "servicios/" + id.hashCode(), Tmio1Servicio.class);
 		return servicio;
 	}
-
+*/
 	@Override
 	public Tmio1Servicio addServicio(Tmio1Servicio servicio) {
 		Tmio1Servicio servicionuevo = restTemplate.postForEntity(SERVER + "servicios", servicio, Tmio1Servicio.class).getBody();
