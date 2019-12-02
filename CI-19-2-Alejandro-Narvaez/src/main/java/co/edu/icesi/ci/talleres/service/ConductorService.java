@@ -29,7 +29,7 @@ public class ConductorService implements InterfazConductorService {
 	@Override
 	public Tmio1Conductore findById(String cedula) {
 
-		return conductorRepository.findById(cedula);
+		return conductorRepository.findByCedula(cedula);
 	}
 
 	@Override

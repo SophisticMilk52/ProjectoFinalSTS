@@ -17,6 +17,7 @@ public class SitioRestControllerImp implements sitioRestController {
 	@Autowired
 	private InterfazSitioService sitioService;
 	
+	@Override
 	@GetMapping("/api/sitios/{id}")
 	public Tmio1Sitio getSitio(@PathVariable Long id) {
 		Tmio1Sitio sitio = sitioService.findById(id);

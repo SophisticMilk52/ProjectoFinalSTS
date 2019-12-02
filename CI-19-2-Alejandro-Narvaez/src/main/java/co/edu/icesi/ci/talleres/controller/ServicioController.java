@@ -49,7 +49,34 @@ public class ServicioController {
 		//buses = busService.getBuses();
 		//rutas = rutaService.getRutas();
 	}
-
+	/*
+	@PostMapping("/service/add-service")
+	public String saveService(@Valid @ModelAttribute Tmio1ServicioPK id, BindingResult bindingResult, Model model){
+		
+		if(bindingResult.hasErrors()) {
+			model.addAttribute("buses", service.findAllBuses());
+			model.addAttribute("routes",service.findAllRoutes());
+			model.addAttribute("drivers",service.findAllDrivers());
+			model.addAttribute("service", new Tmio1ServicioPK());
+			
+			return "/service/add-service";
+		}
+		Tmio1Bus bus = service.findByBusId(id.getIdBus());
+		Tmio1Conductore driver = service.findByDriverId(id.getCedulaConductor());
+		Tmio1Ruta route = service.findByRouteId(id.getIdRuta());
+		Tmio1Servicio s = new Tmio1Servicio();
+		
+		s.setId(id);
+		s.setTmio1Bus(bus);
+		s.setTmio1Conductore(driver);
+		s.setTmio1Ruta(route);
+		s.setHash(s.getId().getHashId());
+		
+		service.saveService(s);
+		
+		return "redirect:/service/";
+	}
+*/
 	@PostMapping("/servicios/add/")
 	public String saveService(@Valid @ModelAttribute Tmio1ServicioPK tmio1ServicioPK, BindingResult bindingResult,
 			@RequestParam(value = "action", required = true) String accion, Model modelo) throws Exception {

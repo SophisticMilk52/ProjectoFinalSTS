@@ -17,12 +17,13 @@ public class conductorRestControllerImp implements conductorRestController {
 	@Autowired
 	private InterfazConductorService conductorService;
 	
-	@GetMapping("/api/conductores/{id}")
-	public Tmio1Conductore getConductor(@PathVariable String cedula) {
-		Tmio1Conductore conductor = conductorService.findById(cedula);
+	@Override
+	@GetMapping("/api/conductores/{cedula}")
+	public Tmio1Conductore getConductor(@PathVariable Integer cedula) {
+		Tmio1Conductore conductor = conductorService.findById(cedula.toString());
 		return conductor;
 	}
-	
+
 	@Override
 	@GetMapping("/api/conductores")
 	public Iterable<Tmio1Conductore> getConductores() {

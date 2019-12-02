@@ -20,6 +20,7 @@ public class busRestControllerImp implements busRestController {
 	private InterfazBusService busService;
 	
 	//Aqui cambiare el tipo de retorno, ya que cambiar el servicio a optional me implicaria cambiar otras coaas
+	@Override
 	@GetMapping("/api/buses/{id}")
 	public Tmio1Bus getBus(@PathVariable Integer id) {
 		Tmio1Bus busEncontrado = null;

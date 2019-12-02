@@ -17,6 +17,7 @@ public class rutaRestControllerImp implements rutaRestController {
 	@Autowired
 	private InterfazRutaService rutaService;
 	
+	@Override
 	@GetMapping("/api/rutas/{id}")
 	public Tmio1Ruta getRuta(@PathVariable Integer id) {
 		Tmio1Ruta ruta = rutaService.findById(id);

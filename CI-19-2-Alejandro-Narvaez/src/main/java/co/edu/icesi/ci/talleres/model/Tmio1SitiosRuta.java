@@ -14,6 +14,8 @@ import javax.persistence.*;
 public class Tmio1SitiosRuta implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private Integer idHash;
+	
 	@EmbeddedId
 	private Tmio1SitiosRutaPK id;
 
@@ -48,9 +50,20 @@ public class Tmio1SitiosRuta implements Serializable {
 		this.id = id;
 	}
 
+	
+	
 	public Tmio1Ruta getTmio1Ruta1() {
 		return this.tmio1Ruta1;
 	}
+
+	public Integer getIdHash() {
+		return idHash;
+	}
+
+	public void setIdHash(Integer idHash) {
+		this.idHash = idHash;
+	}
+
 
 	public void setTmio1Ruta1(Tmio1Ruta tmio1Ruta1) {
 		this.tmio1Ruta1 = tmio1Ruta1;

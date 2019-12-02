@@ -1,10 +1,11 @@
 package co.edu.icesi.ci.talleres.restcontroller;
 
 import co.edu.icesi.ci.talleres.model.Tmio1Servicio;
-import co.edu.icesi.ci.talleres.model.Tmio1ServicioPK;
 
 public interface servicioRestController {
 
+	public Tmio1Servicio getServicio(Integer id);
+	
 	public Iterable<Tmio1Servicio> getServicios();
 	
 	public Tmio1Servicio addServicio(Tmio1Servicio servicio);

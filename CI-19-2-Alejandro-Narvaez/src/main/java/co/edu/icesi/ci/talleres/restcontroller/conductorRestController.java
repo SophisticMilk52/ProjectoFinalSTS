@@ -1,8 +1,11 @@
 package co.edu.icesi.ci.talleres.restcontroller;
 
+
 import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 
 public interface conductorRestController {
+	
+	public Tmio1Conductore getConductor(Integer cedula);
 	
 	public Iterable<Tmio1Conductore> getConductores();
 	

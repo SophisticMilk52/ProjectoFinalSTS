@@ -34,7 +34,7 @@ public class ConductorDelegateImp implements ConductorDelegate {
 
 	@Override
 	public Tmio1Conductore getConductor(String cedula) {
-		Tmio1Conductore conductor = restTemplate.getForObject(SERVER + "conductores/" + cedula, Tmio1Conductore.class);
+		Tmio1Conductore conductor = restTemplate.getForObject(SERVER + "conductores/" + Integer.parseInt(cedula), Tmio1Conductore.class);
 		return conductor;
 	}
 

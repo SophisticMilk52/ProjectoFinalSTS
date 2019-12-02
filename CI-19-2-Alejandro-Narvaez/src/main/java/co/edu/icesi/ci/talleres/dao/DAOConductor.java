@@ -10,6 +10,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
+import co.edu.icesi.ci.talleres.model.Tmio1Bus;
 import co.edu.icesi.ci.talleres.model.Tmio1Conductore;
 
 @Repository
@@ -40,6 +41,12 @@ public class DAOConductor implements InterfazDAOConductor {
 	@Override
 	public Tmio1Conductore findById(String codigo) {
 		return entityManager.find(Tmio1Conductore.class, codigo);
+	}
+	
+	@Override
+	public Tmio1Conductore findByCedula(String cedula) {
+		String jpql = "Select a from Tmio1Conductore a where a.cedula = '" + cedula + "'";
+		return 	(Tmio1Conductore)entityManager.createQuery(jpql).getSingleResult();	
 	}
 
 	@Override

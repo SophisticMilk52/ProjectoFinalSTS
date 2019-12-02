@@ -3,10 +3,15 @@ package co.edu.icesi.ci.talleres.delegate;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import co.edu.icesi.ci.talleres.model.Tmio1Sitio;
+import co.edu.icesi.ci.talleres.model.TransactionBody;
 
 @Component
 public class SitioDelegateImp implements SitioDelegate {
@@ -49,5 +54,18 @@ public class SitioDelegateImp implements SitioDelegate {
 		restTemplate.delete(SERVER + "sitios/" + sitio.getId());
 
 	}
+	
+	/*
+	@Override
+	public void delSitio(Tmio1Sitio sitio) {
+		TransactionBody<Tmio1Sitio> transaction = new TransactionBody<>("delSitio", sitio);
+		HttpEntity<TransactionBody<Tmio1Sitio>> request = new HttpEntity<>(transaction);
+		ResponseEntity<TransactionBody<Tmio1Sitio>> response = null;
+
+		response = restTemplate.exchange(SERVER + "sitios", HttpMethod.DELETE, request,
+				new ParameterizedTypeReference<TransactionBody<Tmio1Sitio>>() {
+				});
+	}
+	*/
 
 }

@@ -18,6 +18,7 @@ public class servicioRestControllerImp implements servicioRestController {
 	@Autowired
 	private InterfazServicioService servicioService;
 	
+	@Override
 	@GetMapping("/api/servicios/{id}")
 	public Tmio1Servicio getServicio(@PathVariable Integer id) {
 		Tmio1Servicio servicio = servicioService.buscarPorId(id);
@@ -44,9 +45,9 @@ public class servicioRestControllerImp implements servicioRestController {
 		servicioService.delete(servicio);
 		return servicio;
 	}
-	
+	/*
 	public Tmio1Servicio buscarPorId(Integer id) {
 		return servicioService.buscarPorId(id);
 	}
-
+*/
 }
