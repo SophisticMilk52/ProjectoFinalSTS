@@ -11,6 +11,9 @@ public interface ServicioDelegate {
 	
 	public Tmio1Servicio addServicio(Tmio1Servicio servicio);
 	
+
+	public Tmio1Servicio UpdateServicio(Tmio1Servicio servicio);
+	
 	public void delServicio(Tmio1Servicio servicio);
 	
 }

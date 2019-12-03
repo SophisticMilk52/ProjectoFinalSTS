@@ -75,4 +75,13 @@ public class ServicioDelegateImp implements ServicioDelegate {
 		return servicio;
 	}
 	*/
+
+	@Override
+	public Tmio1Servicio UpdateServicio(Tmio1Servicio servicio) {
+	
+			Tmio1Servicio service = restTemplate.patchForObject(SERVER + "servicios", servicio, Tmio1Servicio.class);
+		
+				return service;
+				
+	}
 }
