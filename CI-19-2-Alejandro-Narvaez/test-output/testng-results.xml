@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1338" started-at="2019-12-02T23:09:21Z" finished-at="2019-12-02T23:09:22Z">
+  <suite name="Default suite" duration-ms="1356" started-at="2019-12-03T00:22:42Z" finished-at="2019-12-03T00:22:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1338" started-at="2019-12-02T23:09:21Z" finished-at="2019-12-02T23:09:22Z">
+    <test name="Default test" duration-ms="1356" started-at="2019-12-03T00:22:42Z" finished-at="2019-12-03T00:22:44Z">
       <class name="co.edu.icesi.ci.talleres.BusDelegateTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:co.edu.icesi.ci.talleres.BusDelegateTest@5ec0a365]" name="beforeMethod" is-config="true" duration-ms="1289" started-at="2019-12-02T18:09:21Z" finished-at="2019-12-02T18:09:22Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:co.edu.icesi.ci.talleres.BusDelegateTest@60c6f5b]" name="beforeMethod" is-config="true" duration-ms="1305" started-at="2019-12-02T19:22:42Z" finished-at="2019-12-02T19:22:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="crearBusTest()[pri:0, instance:co.edu.icesi.ci.talleres.BusDelegateTest@5ec0a365]" name="crearBusTest" duration-ms="23" started-at="2019-12-02T18:09:22Z" finished-at="2019-12-02T18:09:22Z">
+        <test-method status="FAIL" signature="crearBusTest()[pri:0, instance:co.edu.icesi.ci.talleres.BusDelegateTest@60c6f5b]" name="crearBusTest" duration-ms="23" started-at="2019-12-02T19:22:44Z" finished-at="2019-12-02T19:22:44Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
