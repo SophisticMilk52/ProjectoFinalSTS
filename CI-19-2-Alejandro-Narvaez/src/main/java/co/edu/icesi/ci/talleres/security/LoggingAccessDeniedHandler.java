@@ -1,4 +1,4 @@
-/*
+
 package co.edu.icesi.ci.talleres.security;
 
 import org.slf4j.Logger;
@@ -33,4 +33,3 @@ public class LoggingAccessDeniedHandler implements AccessDeniedHandler {
 
 	}
 }
-*/

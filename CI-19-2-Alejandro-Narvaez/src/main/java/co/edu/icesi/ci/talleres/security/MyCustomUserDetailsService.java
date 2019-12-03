@@ -1,4 +1,4 @@
-/*
+
 package co.edu.icesi.ci.talleres.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,4 +33,3 @@ public class MyCustomUserDetailsService implements UserDetailsService {
 		}
 	}
 }
-*/

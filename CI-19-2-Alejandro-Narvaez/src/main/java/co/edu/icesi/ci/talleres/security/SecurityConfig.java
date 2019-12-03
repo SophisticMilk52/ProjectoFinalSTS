@@ -1,4 +1,4 @@
-/*
+
 package co.edu.icesi.ci.talleres.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.logout().invalidateHttpSession(true).clearAuthentication(true)
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login?logout")
 		.permitAll().and().exceptionHandling().accessDeniedHandler(accessDeniedHandler);
-		
+		*/
 	}
 	
 }
-*/
