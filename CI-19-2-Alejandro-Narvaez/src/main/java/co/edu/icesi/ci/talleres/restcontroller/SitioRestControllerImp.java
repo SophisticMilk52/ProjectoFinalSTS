@@ -1,3 +1,4 @@
+/*
 package co.edu.icesi.ci.talleres.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,3 +47,4 @@ public class SitioRestControllerImp implements sitioRestController {
 	}
 
 }
+*/

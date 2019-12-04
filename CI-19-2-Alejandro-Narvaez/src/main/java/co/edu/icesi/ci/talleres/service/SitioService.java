@@ -1,6 +1,8 @@
 package co.edu.icesi.ci.talleres.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,36 +13,42 @@ import co.edu.icesi.ci.talleres.model.Tmio1Sitio;
 @Service
 public class SitioService implements InterfazSitioService {
 
-	private InterfazDAOSitio sitioRepository;
-	
 	@Autowired
-	public SitioService(InterfazDAOSitio sitioRepository) {
-		this.sitioRepository = sitioRepository;
-	}
+	private InterfazDAOSitio sitioDao;
 	
-	@Transactional
 	@Override
-	public void save(Tmio1Sitio sitio) {
-		sitioRepository.save(sitio);
+	@Transactional(readOnly=false)
+	public boolean save(Tmio1Sitio sitio) throws Exception {
+		sitioDao.save(sitio);
+		return true;
 	}
 
-	@Transactional
 	@Override
+	@Transactional(readOnly=false)
+	public boolean delete(Tmio1Sitio sitio) throws Exception {
+		sitioDao.delete(sitio);
+		return true;
+	}
+
+	@Override
+	@Transactional(readOnly=false)
+	public Tmio1Sitio update(Tmio1Sitio sitio) throws Exception {
+		// TODO Auto-generated method stub
+		sitioDao.update(sitio);
+		return sitio;
+	}
+
+	@Override
+	@Transactional(readOnly=true)
 	public Tmio1Sitio findById(Long id) {
-		return sitioRepository.findById(id);
-	}
-	
-	@Override
-	@Transactional
-	public Iterable<Tmio1Sitio> findAll() {
-		return sitioRepository.findAll();
+		// TODO Auto-generated method stub
+		return sitioDao.findById(id);
 	}
 
 	@Override
-	@Transactional
-	public void delete(Tmio1Sitio sitio) {
-		sitioRepository.delete(sitio);
-
+	@Transactional(readOnly=true)
+	public List<Tmio1Sitio> findAll() {
+		// TODO Auto-generated method stub
+		return sitioDao.findAll();
 	}
-
 }

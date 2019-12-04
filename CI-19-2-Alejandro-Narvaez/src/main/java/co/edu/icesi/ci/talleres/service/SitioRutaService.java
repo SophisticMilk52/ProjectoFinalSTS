@@ -1,5 +1,7 @@
 package co.edu.icesi.ci.talleres.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,49 +14,58 @@ import co.edu.icesi.ci.talleres.model.Tmio1SitiosRutaPK;
 @Service
 public class SitioRutaService implements InterfazSitioRutaService {
 
-	private InterfazDAOSitioRuta sitiorutaRepository;
-	
 	@Autowired
-	public SitioRutaService(InterfazDAOSitioRuta sitiorutaRepository) {
-		this.sitiorutaRepository = sitiorutaRepository;
-	}
+	private InterfazDAOSitioRuta sitioRutaDao;
 	
-	@Transactional
 	@Override
-	public void save(Tmio1SitiosRuta sitioruta) {
-		sitiorutaRepository.save(sitioruta);
+	@Transactional(readOnly=false)
+	public boolean save(Tmio1SitiosRuta sitiosRuta) throws Exception {
+		// TODO Auto-generated method stub
+		sitioRutaDao.save(sitiosRuta);
+		return true;
 	}
 
-	@Transactional
 	@Override
-	public Tmio1SitiosRuta findById(Tmio1SitiosRutaPK id) {
-		return sitiorutaRepository.findById(id);
+	@Transactional(readOnly=false)
+	public boolean update(Tmio1SitiosRuta sitiosRuta) throws Exception {
+		// TODO Auto-generated method stub
+		sitioRutaDao.update(sitiosRuta);
+		return true;
 	}
-	
-	@Transactional
+
 	@Override
-	public Tmio1SitiosRuta buscarPorId(Integer id) {
-		Iterable<Tmio1SitiosRuta> todos = findAll();
-		for (Tmio1SitiosRuta sitioruta : todos) {
-			if (sitioruta.getIdHash().equals(id)) {
-				return sitioruta;
+	@Transactional(readOnly=false)
+	public boolean delete(Tmio1SitiosRuta sitiosRuta) throws Exception {
+		// TODO Auto-generated method stub
+		sitioRutaDao.delete(sitiosRuta);
+		return true;
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public Tmio1SitiosRuta findById() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public Tmio1SitiosRuta findByHashCode(int hashcode) {
+		List<Tmio1SitiosRuta> sitiosruta = sitioRutaDao.findAll();
+		Tmio1SitiosRuta salida = null;
+		for(Tmio1SitiosRuta evaluado : sitiosruta) {
+			if(evaluado.getId().hashCode()==hashcode) {
+				return evaluado;
 			}
 		}
 		return null;
 	}
 
-	@Transactional
 	@Override
-	public Iterable<Tmio1SitiosRuta> findAll() {
-		return sitiorutaRepository.findAll();
+	@Transactional(readOnly=true)
+	public List<Tmio1SitiosRuta> findAll() {
+		// TODO Auto-generated method stub
+		return sitioRutaDao.findAll();
 	}
-
-	@Transactional
-	@Override
-	public void delete(Tmio1SitiosRuta sitioruta) {
-		sitiorutaRepository.delete(sitioruta);
-
-	}
-
 
 }

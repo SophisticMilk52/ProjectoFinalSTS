@@ -11,7 +11,7 @@ public interface InterfazDAOSitioRuta {
 	public void save(Tmio1SitiosRuta entity);
 	public void update(Tmio1SitiosRuta entity);
 	public void delete(Tmio1SitiosRuta entity);
-	public Tmio1SitiosRuta findById(Tmio1SitiosRutaPK id);
+	//public Tmio1SitiosRuta findById(Tmio1SitiosRutaPK id);
 	public List<Tmio1SitiosRuta> findAll();
 	
 }

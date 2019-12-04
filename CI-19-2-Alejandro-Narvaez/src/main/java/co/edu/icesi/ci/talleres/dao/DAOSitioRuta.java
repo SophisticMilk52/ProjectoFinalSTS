@@ -32,12 +32,12 @@ public class DAOSitioRuta implements InterfazDAOSitioRuta {
 	public void delete(Tmio1SitiosRuta entity) {
 		entityManager.remove(entity);
 	}
-
+/*
 	@Override
 	public Tmio1SitiosRuta findById(Tmio1SitiosRutaPK id) {
 		return entityManager.find(Tmio1SitiosRuta.class, id);
 	}
-
+*/
 	@Override
 	public List<Tmio1SitiosRuta> findAll() {
 		String jpql = "Select a from Tmio1SitiosRuta a";

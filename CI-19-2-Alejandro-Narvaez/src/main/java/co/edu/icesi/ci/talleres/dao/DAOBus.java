@@ -22,7 +22,6 @@ public class DAOBus implements InterfazDAOBus {
 	@Override
 	public void save(Tmio1Bus entity) {
 		entityManager.persist(entity);
-
 	}
 
 	@Override
